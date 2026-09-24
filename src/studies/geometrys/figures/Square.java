@@ -1,13 +1,24 @@
 package studies.geometrys.figures;
 
 public class Square {
-    public static void printSqureArea(double side) {
-        String text = String.format("Площадь квадрата со стороной %f = %f", side, squareArea(side));
+
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    public static void printSqureArea(Square s) {
+        String text = String.format("Площадь квадрата со стороной %f = %f", s.side, s.area());
         System.out.println(text);
 
     }
 
-    private static double squareArea(double a) {
-        return a * a;
+    public double area() {
+        return this.side * this.side;
+    }
+
+    public double perimetr() {
+        return 4 * this.side;
     }
 }

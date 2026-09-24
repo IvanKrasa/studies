@@ -1,5 +1,7 @@
 package studies;
 
+import java.io.File;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -8,13 +10,8 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
-        System.out.println(2 + 2);
-        System.out.println(2 * 2);
-        System.out.println(2 - 2);
-        System.out.println(2 / 2);
-        System.out.println((2 + 2) * 2);
-
-        System.out.println("Hello, " + "world!");
-        System.out.println("2+2=" + (2+2));
+        var configFile = new File("src/studies/geometrys/figures/Square.java");
+        System.out.println(configFile.getAbsolutePath());
+        System.out.println(configFile.exists());
     }
 }
