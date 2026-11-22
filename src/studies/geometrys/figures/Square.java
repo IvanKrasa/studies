@@ -1,11 +1,13 @@
 package studies.geometrys.figures;
 
-public class Square {
+import org.junit.jupiter.api.Assertions;
 
-    private double side;
+public record Square (double side) {
 
-    public Square(double side) {
-        this.side = side;
+    public Square {
+        if (side < 0) {
+            throw new IllegalArgumentException("Square side should be non-negative");
+        }
     }
 
     public static void printSqureArea(Square s) {
